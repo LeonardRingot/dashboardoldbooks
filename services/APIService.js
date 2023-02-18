@@ -137,3 +137,36 @@ export function requeteUpdateBooks(_id, nameBook, authorBook, spotID) {
   };
   return axios(config);
 }
+
+export function requeteGetBookById(_id) {
+ 
+  // var data = JSON.stringify({
+  //     "nameBook": nameBook,
+  //     "authorBook": authorBook,
+  //     "spotID": spotID,
+  // });
+  var config = {
+    method: 'get',
+    url: `http://localhost:5000/api/books/`+ _id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+  return axios(config);
+}
+export function requeteGetSpotById(_id) {
+ 
+  // var data = JSON.stringify({
+  //     "nameBook": nameBook,
+  //     "authorBook": authorBook,
+  //     "spotID": spotID,
+  // });
+  var config = {
+    method: 'get',
+    url: `http://localhost:5000/api/spots/`+ _id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  };
+  return axios(config);
+}

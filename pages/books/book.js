@@ -57,6 +57,7 @@ export default function Book()
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Book Author</TableCell>
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '100px' }}>Code</TableCell>
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Spot ID</TableCell>
+                    <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Mettre à jour un livre</TableCell>
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Supprimer livre</TableCell>
                   </TableRow>
                 </TableHead>
@@ -67,6 +68,16 @@ export default function Book()
                       <TableCell sx={{ p: 2, maxWidth: '150px' }}>{book.authorBook}</TableCell>
                       <TableCell sx={{ p: 2, maxWidth: '100px' }}>{book.code}</TableCell>
                       <TableCell sx={{ p: 2, maxWidth: '150px' }}>{book.spotID}</TableCell>
+                      <TableCell sx={{ p: 2, maxWidth: '150px' }}>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        component={Link}
+                        href={`/books/updatebook?_id=${book._id}`}
+                      >
+                        Update
+                      </Button>
+                      </TableCell>
                       <TableCell sx={{ p: 2, maxWidth: '150px' }}>
                         <Button
                           variant="contained"

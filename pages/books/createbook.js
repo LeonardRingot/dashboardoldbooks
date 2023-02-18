@@ -36,7 +36,7 @@ export default function createbook()
     const [registerForm, setregisterForm]= useState({
         nameBook:'',
         authorBook:'',
-        addresseSpot:'',
+        spotID:'',
     })
     const [spots, setSpots] = useState([]);
     const [error, setError] = useState('')

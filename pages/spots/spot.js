@@ -59,6 +59,7 @@ export default function spot()
                   <TableRow>
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Adresse Spot</TableCell>
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>ID</TableCell>
+                    <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Modifier un Spot</TableCell>
                     <TableCell sx={{ border: '1px solid gray', maxWidth: '150px' }}>Supprimer Spot</TableCell>
                   </TableRow>
                 </TableHead>
@@ -67,6 +68,16 @@ export default function spot()
                     <TableRow key={index} sx={{ '&:hover': { bgcolor: 'lightblue' } }}>
                       <TableCell sx={{ p: 2, maxWidth: '150px' }}>{spot.addresseSpot}</TableCell>
                       <TableCell sx={{ p: 2, maxWidth: '150px' }}>{spot._id}</TableCell>
+                      <TableCell sx={{ p: 2, maxWidth: '150px' }}>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        component={Link}
+                        href={`/spots/updatespot?_id=${spot._id}`}
+                      >
+                        Update
+                      </Button>
+                      </TableCell>
                       <TableCell sx={{ p: 2, maxWidth: '150px' }}>
                         <Button
                           variant="contained"
