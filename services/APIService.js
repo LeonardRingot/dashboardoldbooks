@@ -66,4 +66,74 @@ export function requeteDeleteSpot(_id) {
   };
   return axios(configDeletespot);
 }
+export function requetePostBooks(nameBook, authorBook, spotID) {
  
+  var data = JSON.stringify({
+      "nameBook": nameBook,
+      "authorBook": authorBook,
+      "spotID":spotID,
+  });
+  var config = {
+    method: 'post',
+    url: `http://localhost:5000/api/books`,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+  return axios(config);
+}
+
+
+
+export function requetePostSpots(addresseSpot) {
+ 
+  var data = JSON.stringify({
+      "addresseSpot": addresseSpot,
+  });
+  var config = {
+    method: 'post',
+    url: `http://localhost:5000/api/spots`,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+  return axios(config);
+}
+
+
+
+export function requeteUpdateSpots(_id, addresseSpot) {
+ 
+  var data = JSON.stringify({
+      "addresseSpot": addresseSpot,
+  });
+  var config = {
+    method: 'put',
+    url: `http://localhost:5000/api/spots/`+ _id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+  return axios(config);
+}
+
+export function requeteUpdateBooks(_id, nameBook, authorBook, spotID) {
+ 
+  var data = JSON.stringify({
+      "nameBook": nameBook,
+      "authorBook": authorBook,
+      "spotID": spotID,
+  });
+  var config = {
+    method: 'put',
+    url: `http://localhost:5000/api/books/`+ _id,
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: data
+  };
+  return axios(config);
+}

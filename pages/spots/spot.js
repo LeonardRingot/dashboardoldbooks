@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import * as APIServcie from '../services/APIService'
+import * as APIServcie from '../../services/APIService'
 import Box  from '@mui/material/Box'
+import Link from 'next/link';
 import Button from '@mui/material/Button'
 import { TableCell,TableContainer,TableBody, Table , TableHead, TableRow,} from '@mui/material'
 import Navbar from '@/components/Navbar';
@@ -79,13 +80,7 @@ export default function spot()
                   ))}
                 </TableBody>
               </Table>
-              <Button
-                variant="contained"
-                color="primary"
-                // onClick={handleAddBook}
-              >
-                Add Book
-              </Button>
+              <Link legacyBehavior  href='/spots/createspot'><a >Enregister un spot</a></Link>
             </TableContainer>
           ) : (
             <div>No spot to display.</div>

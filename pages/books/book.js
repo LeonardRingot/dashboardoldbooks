@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import * as APIServcie from '../services/APIService'
+import * as APIServcie from '../../services/APIService'
 import Box  from '@mui/material/Box'
 import Button from '@mui/material/Button'
+import Link from 'next/link';
 import { TableCell,TableContainer,TableBody, Table , TableHead, TableRow,} from '@mui/material'
 import Navbar from '@/components/Navbar';
+import { useHistory } from 'react-router-dom';
 import HeaderDashboard from '@/components/Headerdashboard';
 export default function Book()
 {
     let [data, setData] = useState(null)
-    const handleChange = (event) => {
-        setFormData({
-          ...formData,
-          [event.target.id]: event.target.value,
-        });
-      };
+    
     
       const handleDeleteBook = (_id) => {
         APIServcie.requeteDeleteBook(_id.trim())
@@ -83,13 +80,7 @@ export default function Book()
                   ))}
                 </TableBody>
               </Table>
-              <Button
-                variant="contained"
-                color="primary"
-                // onClick={handleAddBook}
-              >
-                Add Book
-              </Button>
+              <Link legacyBehavior  href='/books/createbook'><a >Enregister un livre</a></Link>
             </TableContainer>
           ) : (
             <div>No books to display.</div>

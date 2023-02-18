@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
-import Book from '../pages/book';
-import Spot from '../pages/spot';
+import Book from '../pages/books/book';
+import Spot from '../pages/spots/spot';
 
 const Main = () => {
   return (
