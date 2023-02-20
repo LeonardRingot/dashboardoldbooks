@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home';
 import BookIcon from '@mui/icons-material/Book';
@@ -30,12 +30,12 @@ const Navbar = () => {
     <Divider />
     <List>
         {[
-            ['Home', <HomeIcon />, '/'], 
-            ['Gérer les lieux', < PlaceIcon/>, '/spots'], 
-            ['Gérer les livres', <BookIcon />, '/books'], 
-            ['Se déconnecter', <LogoutIcon />, '/logout']
+           ['Home', <HomeIcon />, '/'], 
+           ['Gérer les lieux', < PlaceIcon/>, '/spots'], 
+           ['Gérer les livres', <BookIcon />, '/books'], 
+           ['Se déconnecter', <LogoutIcon />, '/logout']
         ].map((element, index) => (
-        <ListItem key={element[0]} disablePadding>
+          <ListItem key={element[0]} disablePadding>
           <ListItemButton>
             <ListItemIcon>
             {element[1]}

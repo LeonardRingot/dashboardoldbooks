@@ -141,7 +141,7 @@ export default function updatebook()
               </MenuItem>
             ))}
           </Select>
-          <Button variant="contained" color="primary" type="submit"/>
+          <Button variant="contained" color="primary" type="submit">Mettre à jour</Button>
               </Box>
               </div>
               </>
